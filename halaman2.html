@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DAGELAN4D — Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-two">
+  <header class="topbar">
+    <div class="brand"><div class="app-icon">D</div><div><b>DAGELAN4D</b><small>Portal Digital</small></div></div>
+    <button class="download-btn" onclick="showNotice()">DOWNLOAD</button>
+  </header>
+
+  <main class="portal">
+    <section class="search-banner">
+      <div class="search-copy">
+        <span class="mini-label">PANDUAN</span>
+        <h1>CARI INFORMASI<br>SECARA CEPAT</h1>
+        <p>Gunakan menu di bawah untuk menjelajahi konten dan layanan yang tersedia.</p>
+        <button onclick="document.querySelector('#login').scrollIntoView({behavior:'smooth'})">MULAI SEKARANG</button>
+      </div>
+      <div class="guide-art">
+        <div class="screen-card">🔎<br><b>SEARCH</b></div>
+        <div class="person">◕‿◕</div>
+        <div class="speech">INFO<br>ONLINE</div>
+      </div>
+    </section>
+
+    <section class="login-panel" id="login">
+      <div class="tabs">
+        <button class="active">MASUK</button>
+        <button onclick="showRegister()">DAFTAR</button>
+      </div>
+
+      <form onsubmit="return demoLogin(event)">
+        <label>Username</label>
+        <input id="username" type="text" placeholder="Masukkan username" autocomplete="username" required>
+        <label>Password</label>
+        <input id="password" type="password" placeholder="Masukkan password" autocomplete="current-password" required>
+        <div class="form-links"><a href="#" onclick="showNotice();return false;">Lupa password?</a><a href="#" onclick="showNotice();return false;">Bantuan</a></div>
+        <button class="login-btn" type="submit">LOGIN</button>
+      </form>
+
+      <div class="register-box">
+        <h3>Belum punya akun?</h3>
+        <button class="register-btn" onclick="showRegister()">DAFTAR</button>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="section-title"><b>UPDATE TERBARU</b><span>›</span></div>
+      <article><div class="news-icon">★</div><div><b>Event komunitas terbaru</b><p>Informasi kegiatan dan konten pilihan.</p></div></article>
+      <article><div class="news-icon">⚡</div><div><b>Fitur baru tersedia</b><p>Lihat pembaruan terbaru pada portal.</p></div></article>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html">⌂<small>Home</small></a>
+    <a href="#login">👤<small>Akun</small></a>
+    <a href="#" onclick="showNotice();return false;">📣<small>Info</small></a>
+    <a href="#" onclick="showNotice();return false;">☰<small>Menu</small></a>
+  </nav>
+
+  <div id="notice" class="modal">
+    <div class="modal-box">
+      <button class="close" onclick="hideNotice()">×</button>
+      <h3>Demo website</h3>
+      <p>Ini adalah template legal/non-judi. Silakan ganti teks, logo, gambar, dan tautan dengan konten milikmu.</p>
+      <button class="primary-btn" onclick="hideNotice()">TUTUP</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
